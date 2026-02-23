@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
 
 <body class="bg-dark">
 
-    <div class="container py-5">
+    <div class="container py-5 d-flex align-items-center">
         <div class="col-md-6 mx-auto">
 
             <div class="card shadow">
