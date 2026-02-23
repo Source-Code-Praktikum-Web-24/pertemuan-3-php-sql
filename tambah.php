@@ -23,10 +23,10 @@ if (isset($_POST['submit'])) {
 
 <head>
     <meta charset="UTF-8">
-    <title>Tambah Buku</title>
+    <title>Add Film</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-dark">
@@ -36,25 +36,19 @@ if (isset($_POST['submit'])) {
 
             <div class="card shadow">
                 <div class="card-body">
-                    <h3 class="mb-4">Tambah Buku</h3>
-
-                    <?php if (isset($error)) { ?>
-                        <div class="alert alert-danger">
-                            <?php echo $error; ?>
-                        </div>
-                    <?php } ?>
+                    <h3 class="mb-4">Add your review</h3>
 
                     <form method="POST">
 
                         <div class="mb-3">
-                            <label class="form-label">Judul Film</label>
+                            <label class="form-label">Title</label>
                             <input type="text" name="judul_film" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Rating</label>
                             <select name="nilai" class="form-select" required>
-                                <option value="">Pilih Rating</option>
+                                <option value="">Select Rating</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -64,14 +58,14 @@ if (isset($_POST['submit'])) {
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Ulasan</label>
+                            <label class="form-label">Review</label>
                             <textarea name="ulasan" class="form-control" rows="4" required></textarea>
                         </div>
 
                         <div class="d-flex justify-content-between">
-                            <a href="index.php" class="btn btn-secondary">Kembali</a>
+                            <a href="index.php" class="btn btn-secondary">Back</a>
                             <button type="submit" name="submit" class="btn btn-primary">
-                                Simpan
+                                Save Review
                             </button>
                         </div>
 
@@ -83,7 +77,6 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
