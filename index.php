@@ -24,7 +24,7 @@ $result = mysqli_query(mysql: $conn, query: $query);
             <a href="tambah.php" class="btn btn-primary btn-lg">Add More</a>
         </div>
 
-        <div class="row g-2">
+        <div class="row g-1">
             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm">
@@ -32,7 +32,7 @@ $result = mysqli_query(mysql: $conn, query: $query);
 
                             <div class="d-flex justify-content-between">
                                 <h4 class="card-title mb-2 me-2">
-                                    <?php echo htmlspecialchars($row['judul_film']); ?>
+                                    <?php echo ($row['judul_film']); ?>
                                 </h4>
 
                                 <p class="mb-2 fs-5 ms-auto text-nowrap">
@@ -41,7 +41,7 @@ $result = mysqli_query(mysql: $conn, query: $query);
                             </div>
 
                             <p class="card-text">
-                                <?php echo htmlspecialchars($row['ulasan']); ?>
+                                <?php echo ($row['ulasan']); ?>
                             </p>
                         </div>
                     </div>
