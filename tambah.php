@@ -29,12 +29,12 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-dark">
+<body class="bg-body-secondary min-vh-100 d-flex justify-content-center align-items-center">
 
     <div class="container py-5">
         <div class="col-md-6 mx-auto">
 
-            <div class="card shadow">
+            <div class="card shadow-sm">
                 <div class="card-body">
                     <h3 class="mb-4">Add your review</h3>
 
