@@ -24,28 +24,26 @@ $result = mysqli_query(mysql: $conn, query: $query);
             <a href="tambah.php" class="btn btn-primary btn-lg">Add More</a>
         </div>
 
-        <div class="row g-2">
+        <div class="cards-wrap">
             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
+                <article class="film-card card h-100 shadow-sm">
+                    <div class="card-body">
 
-                            <div class="d-flex justify-content-between">
-                                <h4 class="card-title mb-2 me-2">
-                                    <?php echo htmlspecialchars($row['judul_film']); ?>
-                                </h4>
+                        <div class="d-flex justify-content-between">
+                            <h4 class="card-title mb-2 me-2">
+                                <?php echo htmlspecialchars($row['judul_film']); ?>
+                            </h4>
 
-                                <p class="mb-2 fs-5 ms-auto text-nowrap">
-                                    Rate: <?php echo $row['nilai']; ?>/5
-                                </p>
-                            </div>
-
-                            <p class="card-text">
-                                <?php echo htmlspecialchars($row['ulasan']); ?>
+                            <p class="mb-2 fs-5 ms-auto text-nowrap">
+                                Rate: <?php echo $row['nilai']; ?>/5
                             </p>
                         </div>
+
+                        <p class="card-text">
+                            <?php echo htmlspecialchars($row['ulasan']); ?>
+                        </p>
                     </div>
-                </div>
+                </article>
             <?php } ?>
         </div>
 
